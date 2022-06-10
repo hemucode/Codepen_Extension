@@ -1,0 +1,24 @@
+{
+
+   "content_scripts": [ {
+      "js": [ "bundled-content-script.js" ],
+      "matches": [ "*://codepen.io/*", "*://www.codepen.io/*", "*://m.codepen.io/*"]
+   } ],
+   "description": "Codepen Shortcut",
+   "externally_connectable": {
+      "matches": [ "*://*.codepen.io/*" ]
+   },
+   "host_permissions": [ "*://*.codepen.io/*" ],
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   "manifest_version": 3,
+   "name": "Codepen",
+   "permissions": [ "storage" ],
+   "short_name": "codepen",
+   "version": "4.27.0.4"
+}
