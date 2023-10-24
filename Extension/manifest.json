@@ -10,6 +10,9 @@
       "default_popup": "index.html?popup",
       "default_title": "Codepen Shortcut"
    },
+   "background": {
+      "service_worker": "background.js"
+   },
    "content_scripts": [ {
       "js": [ "bundled-content-script.js" ],
       "matches": [ "*://codepen.io/*", "*://www.codepen.io/*", "*://m.codepen.io/*"]

@@ -1,0 +1,195 @@
+:root {
+  --primary-rgb: 26, 115, 232;
+  --onsurface-rgb: 0, 0, 0;
+  --link-color-rgb: 51, 103, 214;
+  --background-color: white;
+}
+
+body {
+  padding: 8px 16px;
+  text-align: center;
+  min-width: 400px;
+  background-color: var(--background-color);
+  font-size: 81.25%;
+}
+button{
+
+    padding: 5px;
+    width: 100px;
+    background: black;
+    border: 0;
+    color: white;
+    margin: 5px;
+
+}
+button:hover{
+   background: #c7c7c7;
+   color: black;
+   
+}
+textarea{
+  width: 350px;
+  height: 200px;
+}
+h1 {
+  margin-top: 4px;
+}
+
+.logo {
+  transition: all 0.3s ease;
+}
+
+[is="action-link"],
+[is="action-link"]:active,
+[is="action-link"]:hover,
+[is="action-link"]:visited {
+  color: rgb(var(--link-color-rgb));
+}
+
+.control {
+  text-align: right;
+  border-top: 1px solid #00000017;
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-top: 18px;
+  padding: 10px 10px 0px 10px;
+}
+
+.switch {
+  z-index: 0;
+  position: relative;
+  display: block;
+  color: rgba(var(--onsurface-rgb, 0, 0, 0), 0.87);
+  font-family: var(
+    --font,
+    "Roboto",
+    "Segoe UI",
+    BlinkMacSystemFont,
+    system-ui,
+    -apple-system
+  );
+  line-height: 24px;
+}
+
+/* Input */
+.switch > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(var(--onsurface-rgb, 0, 0, 0), 0.38);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s 0.1s, transform 0.2s 0.1s;
+}
+
+/* Span */
+.switch > span {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1666666667em;
+  text-align: left;
+}
+
+/* Track */
+.switch > span::before {
+  content: "";
+  float: right;
+  display: inline-block;
+  margin: 5px 0 5px 10px;
+  border-radius: 7px;
+  width: 36px;
+  height: 14px;
+  background-color: rgba(var(--onsurface-rgb, 0, 0, 0), 0.38);
+  vertical-align: top;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+
+/* Thumb */
+.switch > span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(var(--onprimary-rgb, 255, 255, 255));
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Checked */
+.switch > input:checked {
+  right: -10px;
+  background-color: rgb(var(--primary-rgb, 33, 150, 243));
+}
+
+.switch > input:checked + span::before {
+  background-color: rgba(var(--primary-rgb, 33, 150, 243), 0.6);
+}
+
+.switch > input:checked + span::after {
+  background-color: rgb(var(--primary-rgb, 33, 150, 243));
+  transform: translateX(16px);
+}
+
+/* Hover, Focus */
+.switch:hover > input {
+  opacity: 0.04;
+}
+
+.switch > input:focus {
+  opacity: 0.12;
+}
+
+.switch:hover > input:focus {
+  opacity: 0.16;
+}
+
+/* Active */
+.switch > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.switch > input:active + span::before {
+  background-color: rgba(var(--primary-rgb, 33, 150, 243), 0.6);
+}
+
+.switch > input:checked:active + span::before {
+  background-color: rgba(var(--onsurface-rgb, 0, 0, 0), 0.38);
+}
+
+/* Disabled */
+.switch > input:disabled {
+  opacity: 0;
+}
+
+.switch > input:disabled + span {
+  color: rgb(var(--onsurface-rgb, 0, 0, 0));
+  opacity: 0.38;
+  cursor: default;
+}
+
+.switch > input:disabled + span::before {
+  background-color: rgba(var(--onsurface-rgb, 0, 0, 0), 0.38);
+}
+
+.switch > input:checked:disabled + span::before {
+  background-color: rgba(var(--primary-rgb, 33, 150, 243), 0.6);
+}
